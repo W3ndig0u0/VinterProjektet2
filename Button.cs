@@ -20,6 +20,8 @@ namespace VinterProjektet2
 
   virtual public void Update()
   {
+
+   GamePlay game = new GamePlay();
    button = new Rectangle(xPosition, yPosition, width, height);
 
    if (areOverlapping)
@@ -30,6 +32,7 @@ namespace VinterProjektet2
     if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON))
     {
      Raylib.PlaySound(clickSound);
+     game.Game();
     }
    }
 
