@@ -4,18 +4,16 @@ using System.Numerics;
 
 namespace VinterProjektet2
 {
- public class Player : Enteties
- {
-
-  public override void Update()
+  public class Player : Enteties
   {
 
-   if (areOverlapping)
-   {
-    entetiesInGame = new Rectangle(xPosition, yPosition, width, height);
+    public override void StartUpdate()
+    {
 
-    this.entetiesInGame.x += speed;
-   }
+      if (areOverlapping)
+      {
+        entetiesInGame.x += speed;
+      }
+    }
   }
- }
 }
