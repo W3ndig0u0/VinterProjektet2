@@ -15,29 +15,44 @@ namespace VinterProjektet2
    Raylib.ImageResize(ref wallpapperMenu, 1400, 700);
    Texture2D wallpapperMenuTextrure = Raylib.LoadTextureFromImage(wallpapperMenu);
 
+   Player p = new Player();
+   Enemy e = new Enemy();
 
-   Rectangle player = new Rectangle(200, 450, 50, 100);
-   Rectangle enemy1 = new Rectangle(1200, 450, 50, 100);
+   p.xPosition = 200;
+   p.yPosition = 450;
+
+   e.entetiesInGame.x = 1200;
+   e.entetiesInGame.y = 450;
 
    while (!Raylib.WindowShouldClose())
    {
-    bool move = Raylib.CheckCollisionRecs(player, enemy1);
+    bool move = Raylib.CheckCollisionRecs(p.entetiesInGame, e.entetiesInGame);
 
     if (move == false)
     {
-     player.x += 10;
+     p.xPosition += 5;
     }
     else
     {
-     player.x += 0;
+     p.xPosition += 0;
+     e.hp -= 5;
+    }
+
+
+    if (e.hp <= 0)
+    {
+     e.yPosition -= 5;
     }
 
     Raylib.BeginDrawing();
     Raylib.ClearBackground(Color.WHITE);
     Raylib.DrawTexture(wallpapperMenuTextrure, 0, 0, Color.WHITE);
 
-    Raylib.DrawRectangleRec(player, Color.BLUE);
-    Raylib.DrawRectangleRec(enemy1, Color.BLUE);
+    Raylib.DrawRectangleRec(p.entetiesInGame, Color.BLUE);
+    Raylib.DrawRectangleRec(e.entetiesInGame, Color.BLUE);
+
+    Raylib.DrawRectangleRec(p.entetiesInGame, Color.BLUE);
+    Raylib.DrawRectangleRec(e.entetiesInGame, Color.BLUE);
 
     Raylib.EndDrawing();
 
