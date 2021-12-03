@@ -7,13 +7,13 @@ namespace VinterProjektet2
   public class Enemy : Enteties
   {
 
-    public override void StartUpdate()
-    {
-      if (areOverlapping)
-      {
-        entetiesInGame.x -= speed;
-      }
-    }
+    // public override void StartUpdate()
+    // {
+    //   if (areOverlapping)
+    //   {
+    //     entetiesInGame.x -= speed;
+    //   }
+    // }
 
   }
 }

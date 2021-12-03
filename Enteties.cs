@@ -7,7 +7,7 @@ namespace VinterProjektet2
   public class Enteties
   {
 
-    public int speed = 10;
+    public int speed = 5;
     public int xPosition;
     public int width = 50;
     public int height = 100;
@@ -22,7 +22,7 @@ namespace VinterProjektet2
 
     public int hp = 100;
 
-    virtual public void StartUpdate()
+    public void StartUpdate()
     {
       entetiesInGame = new Rectangle(xPosition, yPosition, width, height);
 

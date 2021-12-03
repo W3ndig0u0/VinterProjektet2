@@ -18,11 +18,13 @@ namespace VinterProjektet2
       Player p = new Player();
       Enemy e = new Enemy();
 
+      Enteties e2 = new Enteties();
+
       p.xPosition = 200;
       p.yPosition = 450;
 
-      e.entetiesInGame.x = 1200;
-      e.entetiesInGame.y = 450;
+      e.xPosition = 1200;
+      e.yPosition = 450;
 
       while (!Raylib.WindowShouldClose())
       {
@@ -54,8 +56,6 @@ namespace VinterProjektet2
 
         Raylib.DrawRectangleRec(p.entetiesInGame, Color.BLUE);
         Raylib.DrawRectangleRec(e.entetiesInGame, Color.BLUE);
-
-        Raylib.DrawRectangle(1000, 450, 50, 100, Color.BLUE);
 
         Raylib.EndDrawing();
 

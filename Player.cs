@@ -7,13 +7,13 @@ namespace VinterProjektet2
   public class Player : Enteties
   {
 
-    public override void StartUpdate()
-    {
+    // public override void StartUpdate()
+    // {
 
-      if (areOverlapping)
-      {
-        entetiesInGame.x += speed;
-      }
-    }
+    //   if (areOverlapping)
+    //   {
+    //     entetiesInGame.x += speed;
+    //   }
+    // }
   }
 }
