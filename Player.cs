@@ -20,5 +20,6 @@ namespace VinterProjektet2
         this.hp -= 5;
       }
     }
+
   }
 }

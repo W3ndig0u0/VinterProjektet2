@@ -18,8 +18,6 @@ namespace VinterProjektet2
       Player p = new Player();
       Enemy e = new Enemy();
 
-      Enteties e2 = new Enteties();
-
       p.xPosition = 200;
       p.yPosition = 450;
 
