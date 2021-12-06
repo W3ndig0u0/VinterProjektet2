@@ -17,7 +17,7 @@ namespace VinterProjektet2
       else
       {
         this.xPosition += 0;
-        // otha.hp -= 5;
+        // this.hp -= 5;
       }
     }
   }
