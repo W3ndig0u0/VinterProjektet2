@@ -32,9 +32,10 @@ namespace VinterProjektet2
 
       if (this.hp <= 0)
       {
-        this.entetiesInGame.y -= speed * 100;
-        this.entetiesHp.y -= speed * 100;
+        this.entetiesInGame.y -= 100;
+        this.entetiesHp.y -= 100;
         entetiesHp.width = 0;
+        this.speed = 0;
       }
     }
 
