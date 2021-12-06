@@ -39,6 +39,12 @@ namespace VinterProjektet2
         Raylib.DrawRectangleRec(p.entetiesInGame, Color.BLUE);
         Raylib.DrawRectangleRec(e.entetiesInGame, Color.BLUE);
 
+        Raylib.DrawRectangleRec(e.entetiesHp, Color.GREEN);
+        Raylib.DrawRectangleRec(p.entetiesHp, Color.GREEN);
+
+        Raylib.DrawRectangleLinesEx(e.entetiesHp, 1, Color.BLACK);
+        Raylib.DrawRectangleLinesEx(p.entetiesHp, 1, Color.BLACK);
+
         Raylib.EndDrawing();
 
       }
