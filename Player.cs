@@ -13,12 +13,14 @@ namespace VinterProjektet2
 
       if (move == false)
       {
-        this.xPosition += speed - 1;
+        this.xPosition += speed;
       }
+
       else
       {
         this.xPosition += 0;
         timeAttack++;
+
         if (timeAttack >= 20)
         {
           this.hp -= 25;
