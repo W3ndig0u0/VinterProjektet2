@@ -22,14 +22,20 @@ namespace VinterProjektet2
 
     public int hp = 100;
 
+    int timer = 0;
+
     public void StartUpdate(Rectangle otha)
     {
       entetiesInGame = new Rectangle(xPosition, yPosition, width, height);
 
-      if (hp <= 0)
+      // if (this.hp <= 0)
+      // {
+
+      if (timer == 0)
       {
-        this.entetiesInGame.y += speed;
+        this.entetiesInGame.y -= speed;
       }
+      // }
     }
 
   }
