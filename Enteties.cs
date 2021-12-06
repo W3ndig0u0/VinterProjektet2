@@ -30,11 +30,6 @@ namespace VinterProjektet2
       {
         this.entetiesInGame.y += speed;
       }
-
-      // if (otha.hp <= 0)
-      // {
-      // otha.yPosition -= 5;
-      // }
     }
 
   }
