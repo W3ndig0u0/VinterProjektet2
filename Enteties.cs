@@ -22,7 +22,7 @@ namespace VinterProjektet2
 
     public int hp = 100;
 
-    public void StartUpdate()
+    public void StartUpdate(Rectangle otha)
     {
       entetiesInGame = new Rectangle(xPosition, yPosition, width, height);
 
@@ -30,6 +30,11 @@ namespace VinterProjektet2
       {
         this.entetiesInGame.y += speed;
       }
+
+      // if (otha.hp <= 0)
+      // {
+      // otha.yPosition -= 5;
+      // }
     }
 
   }

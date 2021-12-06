@@ -7,13 +7,18 @@ namespace VinterProjektet2
   public class Player : Enteties
   {
 
-    // public override void StartUpdate()
-    // {
-
-    //   if (areOverlapping)
-    //   {
-    //     entetiesInGame.x += speed;
-    //   }
-    // }
+    public void PlayerStartUpdate(Rectangle otha)
+    {
+      bool move = Raylib.CheckCollisionRecs(this.entetiesInGame, otha);
+      if (move == false)
+      {
+        this.xPosition += 5;
+      }
+      else
+      {
+        this.xPosition += 0;
+        // otha.hp -= 5;
+      }
+    }
   }
 }

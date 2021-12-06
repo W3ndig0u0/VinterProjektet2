@@ -28,27 +28,11 @@ namespace VinterProjektet2
 
       while (!Raylib.WindowShouldClose())
       {
-        p.StartUpdate();
-        e.StartUpdate();
+        p.StartUpdate(e.entetiesInGame);
+        e.StartUpdate(p.entetiesInGame);
 
-
-        bool move = Raylib.CheckCollisionRecs(p.entetiesInGame, e.entetiesInGame);
-
-        if (move == false)
-        {
-          p.xPosition += 5;
-        }
-        else
-        {
-          p.xPosition += 0;
-          e.hp -= 5;
-        }
-
-
-        if (e.hp <= 0)
-        {
-          e.yPosition -= 5;
-        }
+        p.PlayerStartUpdate(e.entetiesInGame);
+        e.EnemyStartUpdate(p.entetiesInGame);
 
         Raylib.BeginDrawing();
         Raylib.ClearBackground(Color.WHITE);
