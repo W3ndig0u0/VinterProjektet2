@@ -20,9 +20,9 @@ namespace VinterProjektet2
         this.xPosition -= 0;
         timeAttack++;
 
-        if (timeAttack >= 20)
+        if (timeAttack >= 40)
         {
-          this.hp -= 25;
+          this.hp -= 15;
           timeAttack = 0;
         }
       }
