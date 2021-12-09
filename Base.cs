@@ -21,6 +21,15 @@ namespace VinterProjektet2
           timeAttack = 0;
         }
       }
+
+      if (this.hp <= 0)
+      {
+        GameOver();
+      }
+    }
+
+    public void GameOver()
+    {
     }
 
   }

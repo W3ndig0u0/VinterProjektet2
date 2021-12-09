@@ -12,7 +12,7 @@ namespace VinterProjektet2
       bool move = Raylib.CheckCollisionRecs(this.entetiesInGame, otha);
       bool moveBase = Raylib.CheckCollisionRecs(this.entetiesInGame, othaBase);
 
-      if (move == false || moveBase == false)
+      if (move == false && moveBase == false)
       {
         this.xPosition -= speed;
       }
@@ -21,7 +21,7 @@ namespace VinterProjektet2
         this.xPosition -= 0;
         timeAttack++;
 
-        if (timeAttack >= 40)
+        if (timeAttack >= 40 && move == true)
         {
           this.hp -= 15;
           timeAttack = 0;

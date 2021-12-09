@@ -30,11 +30,13 @@ namespace VinterProjektet2
       pBase.yPosition = 350;
       pBase.width = 100;
       pBase.height = 200;
+      pBase.hp = 200;
 
       eBase.xPosition = 1250;
       eBase.yPosition = 350;
       eBase.width = 100;
       eBase.height = 200;
+      eBase.hp = 200;
 
       while (!Raylib.WindowShouldClose())
       {
@@ -67,6 +69,12 @@ namespace VinterProjektet2
 
         Raylib.DrawRectangleLinesEx(e.entetiesHp, 1, Color.BLACK);
         Raylib.DrawRectangleLinesEx(p.entetiesHp, 1, Color.BLACK);
+        Raylib.DrawRectangleLinesEx(eBase.entetiesHp, 1, Color.BLACK);
+        Raylib.DrawRectangleLinesEx(pBase.entetiesHp, 1, Color.BLACK);
+
+        Raylib.DrawRectangle(0, 0, 100, 35, Color.WHITE);
+        Raylib.DrawFPS(10, 10);
+
 
         Raylib.EndDrawing();
 
