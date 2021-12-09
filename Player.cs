@@ -7,11 +7,12 @@ namespace VinterProjektet2
   public class Player : Enteties
   {
 
-    public void PlayerStartUpdate(Rectangle otha)
+    public void PlayerStartUpdate(Rectangle otha, Rectangle othaBase)
     {
       bool move = Raylib.CheckCollisionRecs(this.entetiesInGame, otha);
+      bool moveBase = Raylib.CheckCollisionRecs(this.entetiesInGame, othaBase);
 
-      if (move == false)
+      if (move == false || moveBase == false)
       {
         this.xPosition += speed;
       }

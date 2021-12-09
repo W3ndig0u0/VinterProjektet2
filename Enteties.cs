@@ -25,7 +25,7 @@ namespace VinterProjektet2
     public int timeAttack = 0;
 
 
-    public void StartUpdate(Rectangle otha)
+    public void StartUpdate()
     {
       entetiesInGame = new Rectangle(xPosition, yPosition, width, height);
       entetiesHp = new Rectangle(xPosition, yPosition - 40, hp / 2, 15);

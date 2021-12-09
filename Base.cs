@@ -1,22 +1,16 @@
 using System;
 using Raylib_cs;
-using System.Numerics;
 
 namespace VinterProjektet2
 {
-  public class Enemy : Enteties
+  public class Base : Enteties
   {
 
-    public void EnemyStartUpdate(Rectangle otha, Rectangle othaBase)
+    public void BaseStartUpdate(Rectangle otha)
     {
       bool move = Raylib.CheckCollisionRecs(this.entetiesInGame, otha);
-      bool moveBase = Raylib.CheckCollisionRecs(this.entetiesInGame, othaBase);
 
-      if (move == false || moveBase == false)
-      {
-        this.xPosition -= speed;
-      }
-      else
+      if (move)
       {
         this.xPosition -= 0;
         timeAttack++;
@@ -28,7 +22,6 @@ namespace VinterProjektet2
         }
       }
     }
-
 
   }
 }
