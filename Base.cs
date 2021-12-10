@@ -8,6 +8,7 @@ namespace VinterProjektet2
 
     public void BaseStartUpdate(Rectangle otha)
     {
+      GameOver over = new GameOver();
       bool move = Raylib.CheckCollisionRecs(this.entetiesInGame, otha);
 
       if (move)
@@ -24,12 +25,8 @@ namespace VinterProjektet2
 
       if (this.hp <= 0)
       {
-        GameOver();
+        over.Gameover();
       }
-    }
-
-    public void GameOver()
-    {
     }
 
   }
