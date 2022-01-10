@@ -27,7 +27,7 @@ namespace VinterProjektet2
       Raylib.ImageResize(ref wallpapperMenu, 1400, 700);
       Texture2D wallpapperMenuTextrure = Raylib.LoadTextureFromImage(wallpapperMenu);
 
-      while (!menuBool)
+      while (!Raylib.WindowShouldClose())
       {
 
         buttons.Add(startButton);
