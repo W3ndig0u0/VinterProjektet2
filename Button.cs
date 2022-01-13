@@ -6,9 +6,9 @@ namespace VinterProjektet2
 {
   public class Button
   {
-    int xPosition = 500;
-    int width = 3000;
-    int height = 80;
+    public int xPosition = 500;
+    public int width = 3000;
+    public int height = 80;
 
     public Color ButtonColor;
 
