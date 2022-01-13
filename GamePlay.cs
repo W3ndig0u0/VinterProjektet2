@@ -15,6 +15,8 @@ namespace VinterProjektet2
       Raylib.ImageResize(ref wallpapperMenu, 1400, 700);
       Texture2D wallpapperMenuTextrure = Raylib.LoadTextureFromImage(wallpapperMenu);
 
+      Rectangle spawner = new Rectangle(0, 0, 10, 10);
+
       Base eBase = new Base();
       Base pBase = new Base();
       Player p = new Player();
@@ -54,6 +56,9 @@ namespace VinterProjektet2
         Raylib.BeginDrawing();
         Raylib.ClearBackground(Color.WHITE);
         Raylib.DrawTexture(wallpapperMenuTextrure, 0, 0, Color.WHITE);
+
+
+        Raylib.DrawRectangleRec(p.entetiesInGame, Color.BLUE);
 
         Raylib.DrawRectangleRec(p.entetiesInGame, Color.BLUE);
         Raylib.DrawRectangleRec(e.entetiesInGame, Color.BLUE);
