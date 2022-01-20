@@ -26,26 +26,34 @@ namespace VinterProjektet2
 
       if (areOverlapping)
       {
-        button.x -= 12;
-        ButtonColor.a = 255;
-
         if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON))
         {
           Raylib.PlaySound(clickSound);
           if (this.yPosition == 200)
           {
             game.Game();
+            button.x -= 12;
+            ButtonColor.a = 255;
+          }
+          else if (this.yPosition == 75)
+          {
+            // (Ny gubbe)
+            // Pengar försvinner
+            button.x -= 120;
+            ButtonColor.a = 255;
           }
           else
           {
             Start.Menu();
+            button.x -= 12;
+            ButtonColor.a = 255;
           }
         }
       }
 
       else
       {
-        button.x += 12;
+        button.x += 6;
         ButtonColor.a = 200;
       }
 

@@ -41,13 +41,13 @@ namespace VinterProjektet2
       specialBtn.clickSound = Raylib.LoadSound("Hover.wav");
 
       //! Spawn btn Placement
-      meeleBtn.yPosition = 0;
+      meeleBtn.yPosition = 75;
       rangeBtn.yPosition = 75;
-      specialBtn.yPosition = 150;
+      specialBtn.yPosition = 75;
 
-      meeleBtn.xPosition = 50;
-      rangeBtn.xPosition = 50;
-      specialBtn.xPosition = 50;
+      meeleBtn.xPosition = 25;
+      rangeBtn.xPosition = 80;
+      specialBtn.xPosition = 150;
 
       // !btn size
       meeleBtn.width = 50;
